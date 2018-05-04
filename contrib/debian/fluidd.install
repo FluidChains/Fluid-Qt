@@ -1,0 +1,2 @@
+debian/bin/fluidd usr/bin
+src/fluidd usr/lib/fluid
