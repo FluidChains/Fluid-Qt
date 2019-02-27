@@ -45,6 +45,7 @@ init(){
 	fi
 }
 
+version() { echo "$@" | awk -F. '{ printf("%d%03d%03d%03d\n", $1,$2,$3,$4); }'; }
 
 #################################################################
 #   Update Ubuntu and install prerequisites for running Fluid   #
@@ -56,8 +57,14 @@ sudo apt-get update
 #    Install all necessary packages for building Fluid          #
 #################################################################
 sudo apt-get install -y qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools \
-     build-essential libboost-all-dev libssl1.0-dev libdb++-dev libminiupnpc-dev \
+     build-essential libboost-all-dev libssl-dev libdb++-dev libminiupnpc-dev \
      software-properties-common libqrencode-dev gpw pwgen
+
+if [ $(version `lsb_release -rs`) -gt $(version "16.04") ]
+then
+     sudo apt-get install -y libssl1.0-dev
+fi
+
 sudo add-apt-repository -y ppa:bitcoin/bitcoin
 sudo apt-get update
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev
