@@ -57,7 +57,7 @@ sudo apt-get update
 #################################################################
 sudo apt-get install -y qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools \
      build-essential libboost-all-dev libssl1.0-dev libdb++-dev libminiupnpc-dev \
-     libqrencode-dev gpw pwgen
+     software-properties-common libqrencode-dev gpw pwgen
 sudo add-apt-repository -y ppa:bitcoin/bitcoin
 sudo apt-get update
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev
