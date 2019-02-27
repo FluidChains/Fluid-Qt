@@ -13,10 +13,10 @@ build(){
 
 	cd src
         sudo make -j$NPROC -f makefile.unix
-        sudo cp fluidd /usr/bin/fluidd
+        sudo cp fluidd /usr/local/bin/fluidd
 
         echo ""
-        echo "Build completed ... copied src/fluidd to /usr/bin/fluidd"
+        echo "Build completed ... copied src/fluidd to /usr/local/bin/fluidd"
         echo "Run the application by typing 'fluidd' at the command prompt"
         exit 0
 }
@@ -55,7 +55,9 @@ sudo apt-get update
 #################################################################
 #    Install all necessary packages for building Fluid          #
 #################################################################
-sudo apt-get install -y qt4-qmake libqt4-dev libminiupnpc-dev libdb++-dev libdb-dev libcrypto++-dev libqrencode-dev libboost-all-dev build-essential libboost-system-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libboost-filesystem-dev libboost-program-options-dev libboost-thread-dev libssl-dev libdb++-dev libssl-dev ufw git gpw pwgen
+sudo apt-get install -y qt5-default qt5-qmake qtbase5-dev-tools qttools5-dev-tools \
+     build-essential libboost-all-dev libssl1.0-dev libdb++-dev libminiupnpc-dev \
+     libqrencode-dev gpw pwgen
 sudo add-apt-repository -y ppa:bitcoin/bitcoin
 sudo apt-get update
 sudo apt-get install -y libdb4.8-dev libdb4.8++-dev
