@@ -1,6 +1,6 @@
 TEMPLATE = app
 TARGET = fluid-qt
-VERSION = 1.0.0.1
+VERSION = 2.0.0.1
 INCLUDEPATH += src src/json src/qt
 QT += network
 DEFINES += ENABLE_WALLET
