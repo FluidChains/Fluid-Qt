@@ -56,7 +56,7 @@ static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20
 static const int64_t COIN_YEAR_REWARD = 1 * CENT; // 1% per year
 
 static const unsigned int MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_TESTNET = 200000;
-static const unsigned int MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_MAINNET = 313091;
+static const unsigned int MIN_CONFIRMATIONS_SF_ACTIVATION_HEIGHT_MAINNET = 314359;
 
 inline unsigned int GetStakeMinConfirmations(unsigned int height) {
     if (TestNet())
